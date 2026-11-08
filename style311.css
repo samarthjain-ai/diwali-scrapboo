@@ -1,0 +1,569 @@
+/* ---------- Vintage Diwali scrapbook theme ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Kalam:wght@400;700&display=swap');
+
+:root {
+  --paper: #f1dfc5;
+  --paper-light: #f8ecd9;
+  --ink: #49332e;
+  --wine: #7d394b;
+  --rose: #b87978;
+  --gold: #b77c3e;
+  --olive: #4d5740;
+}
+
+.stApp {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(183,121,120,.16), transparent 26rem),
+    radial-gradient(circle at 88% 28%, rgba(183,124,62,.12), transparent 28rem),
+    linear-gradient(135deg, #ead6b9, #f4e6d1 48%, #e7d0b6);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+
+[data-testid="stHeader"] { background: transparent; }
+[data-testid="stToolbar"] { right: 1rem; }
+.block-container {
+  max-width: 1120px;
+  padding-top: 1.2rem;
+  padding-bottom: 2rem;
+}
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: var(--ink) !important;
+  letter-spacing: -.035em;
+}
+p, label { color: var(--ink); }
+a { color: var(--wine) !important; }
+
+/* Navigation */
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 13px 20px;
+  border: 1px solid rgba(100,65,50,.22);
+  border-radius: 3px;
+  background: rgba(249,239,222,.76);
+  box-shadow: 0 8px 25px rgba(74,47,36,.06);
+  margin-bottom: 3.5rem;
+}
+.brand {
+  font-family: 'Kalam', cursive;
+  color: var(--wine);
+  font-size: 15px;
+}
+.nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.nav-links a {
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* Intro */
+.intro {
+  max-width: 780px;
+  margin: 0 auto 1.8rem;
+  text-align: center;
+  padding: 2.2rem 1rem 1.2rem;
+}
+.intro-eyebrow, .section-kicker {
+  font-size: 10px;
+  letter-spacing: .22em;
+  color: var(--wine);
+  font-weight: 600;
+}
+.intro h1 {
+  font-size: clamp(58px, 9vw, 105px) !important;
+  line-height: .78;
+  margin: 25px 0;
+  font-weight: 500;
+}
+.intro h1 em, .section-heading h2 em, .celebration-copy h2 em,
+.quote-intro h2 em, .final-wish h2 em {
+  color: var(--wine);
+  font-weight: 400;
+}
+.intro-copy {
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 15px;
+  color: #71574b;
+}
+.intro-flourish { margin-top: 23px; color: var(--gold); font-size: 23px; }
+.scroll-cue {
+  text-align: center;
+  margin: 2rem 0 5rem;
+  color: #896b59;
+  letter-spacing: .2em;
+  font-size: 9px;
+}
+.scroll-cue span { display: block; font-size: 22px; margin-top: 8px; color: var(--wine); }
+.hint-line { text-align: center; font-size: 12px; color: #866d5c; }
+
+/* Streamlit form */
+[data-testid="stForm"] {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 18px 22px 10px;
+  background: rgba(250,240,222,.78);
+  border: 1px solid rgba(111,70,52,.22);
+  border-radius: 4px;
+  box-shadow: 7px 8px 0 rgba(128,82,67,.09);
+}
+[data-testid="stTextInput"] label {
+  color: var(--wine) !important;
+  font-size: 10px !important;
+  letter-spacing: .16em;
+  font-weight: 600;
+}
+[data-testid="stTextInput"] input {
+  background: #fff8ec !important;
+  border: 1px solid #c9a98a !important;
+  border-radius: 2px !important;
+  color: var(--ink) !important;
+}
+.stButton button, [data-testid="stFormSubmitButton"] button {
+  background: var(--wine) !important;
+  color: #fff4e4 !important;
+  border: 1px solid var(--wine) !important;
+  border-radius: 2px !important;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: .04em;
+  padding: .65rem 1rem;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.stButton button:hover, [data-testid="stFormSubmitButton"] button:hover {
+  background: #63303e !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(90,48,55,.18);
+}
+
+/* Section structure */
+.section-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(105,69,52,.28);
+  padding-top: 18px;
+  margin: 4rem 0 2rem;
+}
+.section-kicker span:first-child {
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  letter-spacing: 0;
+}
+.celebration-copy {
+  padding: 25px 12px 25px 22px;
+  position: relative;
+}
+.handwritten-small {
+  font-family: 'Kalam', cursive;
+  color: var(--wine);
+  font-size: 19px;
+  transform: rotate(-2deg);
+}
+.celebration-copy h2, .section-heading h2, .quote-intro h2, .final-wish h2 {
+  font-size: clamp(43px, 6vw, 70px) !important;
+  line-height: .88;
+  font-weight: 500;
+  margin: 18px 0;
+}
+.celebration-copy p, .section-heading p, .quote-intro p {
+  color: #72594d;
+  line-height: 1.9;
+  max-width: 430px;
+  font-size: 14px;
+}
+.signature, .final-signoff {
+  color: var(--wine);
+  font-family: 'Kalam', cursive;
+  font-size: 19px;
+  margin-top: 22px;
+}
+[data-testid="stImage"] img {
+  border: 9px solid rgba(250,239,218,.92);
+  outline: 1px solid rgba(105,69,52,.35);
+  box-shadow: 12px 15px 0 rgba(123,73,63,.15);
+  transform: rotate(1.2deg);
+}
+.image-placeholder {
+  padding: 5rem 1rem;
+  text-align: center;
+  background: #ead3b5;
+  border: 1px dashed #a87960;
+  color: #765648;
+  font-size: 13px;
+}
+.divider-ornament { text-align: center; color: var(--gold); margin: 3rem 0 1rem; }
+.center-quote {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 29px);
+  line-height: 1.4;
+  color: #67463f;
+  margin: 0 auto 5rem;
+}
+
+/* Journey cards */
+.section-heading { text-align: center; margin: 0 auto 2.5rem; }
+.section-heading p { margin: 0 auto; }
+.journey-card {
+  min-height: 220px;
+  padding: 22px 20px;
+  background: rgba(250,240,222,.82);
+  border: 1px solid rgba(111,70,52,.24);
+  box-shadow: 5px 6px 0 rgba(128,82,67,.08);
+  margin-bottom: 16px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.journey-card:hover { transform: translateY(-5px) rotate(-.5deg); box-shadow: 9px 12px 0 rgba(128,82,67,.1); }
+.card-top { display: flex; justify-content: space-between; color: var(--gold); font-size: 12px; }
+.card-top span:last-child { font-size: 21px; }
+.journey-card h3 { font-size: 29px !important; margin: 20px 0 8px; color: var(--wine) !important; }
+.journey-card p { color: #735b4e; line-height: 1.7; font-size: 13px; }
+
+/* Quote */
+.quote-intro { padding: 20px 10px; }
+.quote-paper {
+  position: relative;
+  padding: 35px 35px 28px;
+  background: #f8ead3;
+  border: 1px solid #c6a98a;
+  box-shadow: 9px 10px 0 rgba(122,75,61,.13);
+  transform: rotate(1deg);
+}
+.quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--rose);
+  font-size: 76px;
+  line-height: .5;
+}
+.quote-paper p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(25px, 3vw, 36px);
+  line-height: 1.15;
+  color: #573d39;
+  margin: 20px 0 28px;
+}
+.quote-bottom { font-size: 9px; letter-spacing: .17em; color: var(--wine); }
+
+/* Final */
+.final-wish {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 55px 30px;
+  background: rgba(249,237,216,.8);
+  border: 1px solid rgba(111,70,52,.28);
+  box-shadow: 10px 12px 0 rgba(128,82,67,.1);
+  position: relative;
+  overflow: hidden;
+}
+.final-lamp { font-size: 42px; animation: lamp-glow 2.5s ease-in-out infinite; }
+.final-wish h2 { margin: 22px 0; }
+.final-wish p {
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.9;
+  color: #71574b;
+  font-size: 14px;
+}
+.final-signoff { font-size: 25px; }
+.final-stars { margin-top: 22px; color: var(--gold); letter-spacing: .4em; }
+.footer {
+  text-align: center;
+  color: #967b68;
+  font-size: 10px;
+  letter-spacing: .08em;
+  padding: 3rem 0 1rem;
+}
+
+@keyframes lamp-glow {
+  0%, 100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 3px rgba(183,124,62,.2)); }
+  50% { transform: translateY(-4px) scale(1.05); filter: drop-shadow(0 0 13px rgba(183,124,62,.65)); }
+}
+
+@media (max-width: 700px) {
+  .top-nav { align-items: flex-start; flex-direction: column; margin-bottom: 2rem; }
+  .nav-links { gap: 10px 15px; }
+  .intro { padding-top: 1.2rem; }
+  .intro h1 { font-size: 62px !important; }
+  .section-kicker { margin-top: 3rem; }
+  .celebration-copy { padding-left: 5px; }
+  .journey-card { min-height: auto; }
+  .quote-paper { padding: 28px 24px; }
+  .final-wish { padding: 40px 20px; }
+}
+
+
+/* Uploaded scrapbook image arrangement */
+[data-testid="stImage"] {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+[data-testid="stImage"] img {
+  max-height: 620px;
+  object-fit: cover;
+}
+.image-caption {
+  text-align: center;
+  color: #806657;
+  font-family: 'Kalam', cursive;
+  font-size: 15px;
+  margin-top: -4px;
+  transform: rotate(-1deg);
+}
+
+/* ---------- Refined opening: copy on the left, scrapbook on the right ---------- */
+.intro-side {
+  max-width: none;
+  margin: 0;
+  padding: 1.4rem .25rem 1rem;
+  text-align: left;
+}
+.intro-side .intro-copy { margin-left: 0; }
+.intro-side .intro-flourish { text-align: left; }
+[data-testid="stForm"] {
+  max-width: none;
+  width: 100%;
+  margin: .8rem 0 0;
+}
+
+/* Preserve the full artwork instead of cropping it to fill a wide box. */
+[data-testid="stImage"] img {
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+}
+
+/* Visitor's writing space */
+.personal-note-heading { margin-bottom: 1.5rem; }
+[data-testid="stTextArea"] label {
+  color: var(--wine) !important;
+  font-size: 10px !important;
+  letter-spacing: .16em;
+  font-weight: 600;
+}
+[data-testid="stTextArea"] textarea {
+  background: #fff8ec !important;
+  border: 1px solid #c9a98a !important;
+  color: var(--ink) !important;
+  border-radius: 3px !important;
+  line-height: 1.7;
+}
+[data-testid="stDownloadButton"] button {
+  background: var(--olive) !important;
+  color: #fff8ec !important;
+  border: 1px solid var(--olive) !important;
+  border-radius: 2px !important;
+}
+
+@media (max-width: 700px) {
+  .intro-side { padding: 1rem 0 .5rem; }
+  .intro-side h1 { font-size: 58px !important; }
+  [data-testid="stImage"] img { max-height: 480px; }
+}
+
+
+/* =================================
+   TYPOGRAPHY & CONTRAST FIX
+================================= */
+
+/* Main page heading */
+.intro h1 {
+    font-size: 58px !important;
+    line-height: 1.12 !important;
+    color: #422C2B !important;
+    font-weight: 500 !important;
+}
+
+/* Section headings */
+.section-heading h2 {
+    font-size: 42px !important;
+    line-height: 1.25 !important;
+    color: #59343D !important;
+    font-weight: 500 !important;
+}
+
+/* Section descriptions */
+.section-heading p,
+.intro-copy {
+    font-size: 19px !important;
+    line-height: 1.8 !important;
+    color: #59453D !important;
+}
+
+/* Small section labels */
+.section-heading .eyebrow,
+.intro-eyebrow {
+    font-size: 14px !important;
+    letter-spacing: 3px !important;
+    color: #754451 !important;
+    font-weight: 700 !important;
+}
+
+/* General text */
+.stMarkdown p,
+.stMarkdown li {
+    color: #49352F;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Form labels */
+.stTextInput label,
+.stTextArea label {
+    color: #49352F !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+/* Buttons */
+.stButton > button,
+.stFormSubmitButton > button,
+.stDownloadButton > button {
+    color: #FFF7E9 !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+}
+/* Section number and title */
+.section-heading {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 44px !important;
+    letter-spacing: 1px;
+}
+
+.section-heading p {
+    font-size: 18px !important;
+    max-width: 650px;
+}
+
+
+/* TEXT VISIBILITY AND SIZE FIX */
+
+.intro h1 {
+    font-size: 58px !important;
+    color: #422C2B !important;
+}
+
+.section-heading h2,
+.quote-intro h2 {
+    font-size: 44px !important;
+    color: #59343D !important;
+}
+
+.intro-copy,
+.section-heading p,
+.quote-intro p {
+    font-size: 19px !important;
+    color: #59453D !important;
+    line-height: 1.8 !important;
+}
+
+.section-kicker {
+    font-size: 16px !important;
+    color: #754451 !important;
+    font-weight: 700 !important;
+}
+
+.stTextArea label {
+    color: #49352F !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+}
+
+.stTextArea textarea {
+    color: #49352F !important;
+    font-size: 17px !important;
+}
+
+
+
+/* Personal scrapbook writing */
+.paper-label {
+    text-align: center;
+    color: #754451 !important;
+    font-size: 17px !important;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+/* Button labels live in a <p>; the global p/.stMarkdown colour rules were turning them dark on the wine background */
+.stButton button p, .stButton button span,
+[data-testid="stFormSubmitButton"] button p,
+[data-testid="stDownloadButton"] button p,
+.stDownloadButton button p {
+  color: #FFF7E9 !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  margin: 0;
+}
+
+/* Sender's name */
+.final-from {
+  font-family: 'Kalam', cursive;
+  color: var(--wine);
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.stButton { margin-top: 1.6rem; }
+
+
+/* Festival-day banner */
+.festival-banner {
+  text-align: center;
+  margin: -2rem 0 2rem;
+  padding: 10px 16px;
+  background: rgba(125,57,75,.92);
+  color: #FFF7E9;
+  border-radius: 3px;
+  font-size: 15px;
+  letter-spacing: .02em;
+}
+.festival-banner b { color: #FFF7E9; }
+
+/* Diyas */
+.diya-row { display: flex; justify-content: center; gap: clamp(6px, 2vw, 22px); margin: 1rem 0 .4rem; flex-wrap: wrap; }
+.diya { font-size: clamp(30px, 6vw, 52px); filter: grayscale(1) opacity(.3); transition: filter .5s ease; }
+.diya.lit { filter: none; animation: lamp-glow 2.5s ease-in-out infinite; }
+.diya-note { text-align: center; color: var(--wine); font-family: 'Kalam', cursive; font-size: 20px !important; margin-bottom: 1rem; }
+
+
+/* Sticky navigation (the sticky element must be Streamlit's element container, not the nav itself) */
+[data-testid="stElementContainer"]:has(.top-nav) { position: sticky; top: 8px; z-index: 999; }
+.top-nav { margin-bottom: 1.5rem; backdrop-filter: blur(6px); }
+#celebration, #journey, #little-reminders, #diya, #my-year, #wish-wall, #final-wish { scroll-margin-top: 90px; }
+
+/* Wish wall */
+.wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 22px; margin: 1.5rem 0 .5rem; }
+.wish-note {
+  position: relative; padding: 24px 18px 16px; min-height: 130px;
+  box-shadow: 4px 6px 0 rgba(122,75,61,.13); border: 1px solid rgba(111,70,52,.18);
+  transition: transform .2s ease;
+}
+.wish-note:hover { transform: rotate(0deg) translateY(-3px) !important; }
+.wish-note::before {
+  content: ""; position: absolute; top: -9px; left: 50%; width: 64px; height: 18px; margin-left: -32px;
+  background: rgba(210,190,150,.75); transform: rotate(-2deg);
+}
+.wish-note p { font-family: 'Kalam', cursive; font-size: 18px !important; line-height: 1.5 !important; color: #49332E !important; margin: 0; }
+.wish-name { margin-top: 12px; font-size: 12px; letter-spacing: .08em; color: var(--wine); text-transform: uppercase; }
+.wish-note.c0 { background: #fbe7a8; transform: rotate(-1.5deg); }
+.wish-note.c1 { background: #f6c9c0; transform: rotate(1.2deg); }
+.wish-note.c2 { background: #d6e4c4; transform: rotate(-.8deg); }
+.wish-note.c3 { background: #cfe0ea; transform: rotate(1.6deg); }
+[data-testid="stTextArea"] textarea { font-size: 17px !important; }
