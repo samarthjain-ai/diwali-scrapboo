@@ -5,7 +5,7 @@ A Diwali scrapbook web app by **Samarth Jain (Subh)**, built with Python and Str
 **🔗 Live app: https://diwali-scrapboo.streamlit.app/**
 
 Greet someone by name by adding `?name=` to the link, for example
-https://diwali-scrapboo.streamlit.app/?name=Riya
+https://diwali-scrapboo.streamlit.app/?name=samarth
 
 ---
 
